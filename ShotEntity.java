@@ -25,16 +25,16 @@ public class ShotEntity extends Entity {
 
         if (other instanceof AlienEntity || other instanceof MotherShipEntity || 
                     other instanceof BossEntity || other instanceof AlienShotEntity) {
-            if(other.getRef().equals("alien.gif")) {
-                other.setSprite("alienHurt.gif");
-            } else if(other.getRef().equals("motherShip.gif") && other.getHealth() > 0) {
+            if(other.getRef().equals("res/alien.gif")) {
+                other.setSprite("res/alienHurt.gif");
+            } else if(other.getRef().equals("res/motherShip.gif") && other.getHealth() > 0) {
                 other.takeHit();
-            } else if(other.getRef().equals("bossyboss.gif") && other.getHealth() > 0) {
+            } else if(other.getRef().equals("res/bossyboss.gif") && other.getHealth() > 0) {
                 other.takeHit();
-            } else if(other.getRef().equals("alienShot.gif") || other.getRef().equals("bossShot.gif")) {
+            } else if(other.getRef().equals("res/alienShot.gif") || other.getRef().equals("res/bossShot.gif")) {
                 game.removeEntity(other);
-            }else if(other.getRef().equals("alienHurt.gif") || other.getHealth() <= 0 ||
-               other.getRef().equals("alien - Copy.gif")){
+            }else if(other.getRef().equals("res/alienHurt.gif") || other.getHealth() <= 0 ||
+               other.getRef().equals("res/alien - Copy.gif")){
                 game.removeEntity(other);
                 game.notifyAlienKilled();
             }

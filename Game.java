@@ -91,7 +91,7 @@ public class Game extends Canvas {
     }
     
     private void initEntities(int lives) {
-        ship = new ShipEntity(this,"ship.gif",370,550);
+        ship = new ShipEntity(this,"res/ship.gif",370,550);
         entities.add(ship);
         ((ShipEntity)ship).setLives(lives);
 
@@ -112,7 +112,7 @@ public class Game extends Canvas {
     }
 
     private void initEntities() {
-        ship = new ShipEntity(this,"ship.gif",370,550);
+        ship = new ShipEntity(this,"res/ship.gif",370,550);
         entities.add(ship);
 
         Level level = new Level(this);
@@ -207,7 +207,7 @@ public class Game extends Canvas {
         }
 
         lastFire = System.currentTimeMillis();
-        ShotEntity shot = new ShotEntity((ShipEntity)ship, this,"shot.gif",ship.getX()+10,ship.getY()-30);
+        ShotEntity shot = new ShotEntity((ShipEntity)ship, this,"res/shot.gif",ship.getX()+10,ship.getY()-30);
         entities.add(shot);
     }
 
@@ -217,13 +217,13 @@ public class Game extends Canvas {
         }
 
         alien.setLastShot(System.currentTimeMillis());
-        AlienShotEntity shot1 = new AlienShotEntity(alien, this, "alienShot.gif", (alien.getX() + 
+        AlienShotEntity shot1 = new AlienShotEntity(alien, this, "res/alienShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 4 - 10, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot2 = new AlienShotEntity(alien, this, "alienShot.gif", (alien.getX() + 
+        AlienShotEntity shot2 = new AlienShotEntity(alien, this, "res/alienShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth())  / 2 - 10, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot3 = new AlienShotEntity(alien, this, "alienShot.gif", (alien.getX() + 
+        AlienShotEntity shot3 = new AlienShotEntity(alien, this, "res/alienShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 3 / 4 - 10, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot4 = new AlienShotEntity(alien, this, "alienShot.gif", (alien.getX() + 
+        AlienShotEntity shot4 = new AlienShotEntity(alien, this, "res/alienShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) - 10, alien.getY() + alien.getSprite().getHeight() + 30);
         entities.add(shot1);
         entities.add(shot2);
@@ -237,29 +237,29 @@ public class Game extends Canvas {
         }
 
         alien.setLastShot(System.currentTimeMillis());
-        AlienShotEntity shot1 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot1 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 12 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot2 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot2 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 6 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot3 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot3 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 4 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot4 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot4 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 3 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot5 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot5 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 5 / 12 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot6 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot6 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) / 2 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot7 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot7 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 7 / 12 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot8 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot8 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 2 / 3 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot9 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot9 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 3 / 4 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot10 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot10 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 5 / 6 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot11 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot11 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) * 11 / 12 + 5, alien.getY() + alien.getSprite().getHeight() + 30);
-        AlienShotEntity shot12 = new AlienShotEntity(alien, this, "bossShot.gif", (alien.getX() + 
+        AlienShotEntity shot12 = new AlienShotEntity(alien, this, "res/bossShot.gif", (alien.getX() + 
                     alien.getSprite().getWidth()) - 5, alien.getY() + alien.getSprite().getHeight() + 30);
         entities.add(shot1);
         entities.add(shot2);
@@ -315,8 +315,8 @@ public class Game extends Canvas {
                     g.drawString("Aliens left: " + alienCount, 10, 45);
                     g.drawString("Lives left: ", 635, 45);
                     g.drawString("FPS: " + fps, 725, 20);
-                    Sprite sprite = store.getSprite("shipClip.gif");
-                    Sprite dead = store.getSprite("deadShipClip.gif");
+                    Sprite sprite = store.getSprite("res/shipClip.gif");
+                    Sprite dead = store.getSprite("res/deadShipClip.gif");
                     if(((ShipEntity)ship).getLives() == 5) {
                         sprite.draw(g, 715, 35);
                         sprite.draw(g, 730, 35);
